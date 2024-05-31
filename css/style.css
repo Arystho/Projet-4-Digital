@@ -101,15 +101,16 @@ ul{
 
 #section-1 article div  .div-1 div{
     gap: 32px;
-    position: relative;
-    right: 242px;
+    /* position: relative;
+    right: 242px; */
+    justify-content: flex-start;
+    align-items: center;
 }
 #section-1 article div  .div-1 div hr{
-    width: 86px;
+    width: 62px;
     border: 1px solid var(--green);
-    height: 0;
-    position: relative;
-    top: 29px;
+    /* position: relative; */
+    /* top: 6px; */
 }
 
 #section-1 article div  .div-1 a{
@@ -119,8 +120,6 @@ ul{
     border-radius: 3px;
     background: var(--green);
     color: var(--white);
-    position: relative;
-    left: 111px;
 }
 
 #section-1 article div  .div-1 a:hover{
@@ -130,18 +129,28 @@ ul{
 
 #section-1 article div  .div-1{
     display: grid;
+    align-content: space-evenly;
 } 
 
-#section-1 article div .div-1 p{
-    width: 479px;
+#section-1 article div .div-1  #para p{
+    position: relative;
+    left: 10px;
+    max-width: 727px;
 }
 
-#section-1 article div  img{
+#section-1 article div .div-1 #para{
+    display: grid;
+    justify-items: center;
+    /* width: 694px; */
+}
+
+#section-1 article div  #img-1{
     width: 663px;
-    height: 663px;
+    height: auto;
     padding: 30px 0 30px 40px;
+    position: relative;
+    right: 7px;
 }
-
 /* section 2 */
 
 /* #section-2 div{
@@ -183,7 +192,7 @@ ul{
     top: 19px;
 }
 
-#section-4 div .skills h2{
+#section-2 div .skills h2{
     color: var(--green);
 }
 
@@ -191,10 +200,9 @@ ul{
     display: flex;
     justify-content: center;
     position: relative;
-    gap: 55px;
+    gap: 35px;
     padding: 55px;
 }
-
 
 /* section 3 */
 #section-3{
@@ -203,7 +211,7 @@ ul{
 }
 
 #section-3 div{
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: auto;
 }
 
@@ -213,8 +221,7 @@ ul{
 
 #section-3 div .client{
     display: flex;
-    position: relative;
-    gap: 55px;
+    gap: 32px;
     padding: 55px 0;
 }
 
@@ -231,6 +238,7 @@ ul{
     gap: 70px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #section-3 div .image #agile{
@@ -257,14 +265,19 @@ ul{
 
 /* section 4 */
  #section-4 div{
-   /* max-width: 1440px;*/
     margin: auto;
 } 
 
-#section-4 .web{
-    height: 464px;
+#section-4 .web article div{
     display: flex;
-    gap: 15px;
+    gap: 25px;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+#section-4 .web article div img{
+    max-width: 371px;
 }
 
 #section-4 div .skill{
@@ -304,12 +317,13 @@ ul{
 #section-4 div .a{
     display: grid;
     justify-content: center;
-    padding: 84px;
+    padding: 84px 0 0;
 }
 
 /* section 5 */
 #section-5{
     background: var(--white-grey);
+    margin-top: 96px;
 }
 
  #section-5 div{
@@ -342,16 +356,14 @@ ul{
     padding: 20px 0;
 }
 
-#section-5 div #contacter article p{
-    width: 467px;
-    
+#section-5 #contacter article{
+    top: 109px;
+    position: relative;
+    padding-right: 79px;
 }
 
-#section-5 #contacter article{
-    width: 600px;
-    top: 109px;
-    left: 95px;
-    position: relative;
+#section-5 #contacter article p{
+    max-width: 500px;
 }
 
 #section-5 #ia div{
@@ -383,7 +395,6 @@ ul{
     width: 537px;
     height: 21px;
     padding: 10px 17px 10px 17px;
-    border-radius: 3px 0px 0px 0px;
     margin-bottom: 20px;
 }
 
@@ -406,6 +417,11 @@ ul{
     margin: 20px 0;
 }
 
+#section-5 div #contacter form{
+    position: relative;
+    right: 37px;
+}
+
 /* footer */
 /* #footer div {
     max-width: 1440px;
@@ -413,7 +429,7 @@ ul{
 } */
 
 #footer div p{
-    color: var(--green);
+    color: var(--blue);
     display: grid;
     justify-content: center;
     padding: 20px;
@@ -423,14 +439,81 @@ ul{
 
 /* Responsive tablette - 1024px à 768px */
 @media screen and (max-width:1024px){
-    .selecteur{
-        propriete : valeur;
+    #en-tete div {
+        text-align: center;
+    }
+    #section-1 article div #img-1 {
+        height: auto;
+        padding: 25px;
+    }
+    #section-2 div .container div {
+        padding: 10px;
+    }
+    #section-3 div .image {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+ 
+    #section-5 div form .email, #section-5 div form textarea {
+        width: 100%;
+    }
+    #footer div {
+        padding: 10px;
     }
 }
 
-/* Responsive mobile - 767px à 320px */
-@media screen and (max-width:320px){
-    .selecteur{
-        propriete : valeur;
+/* Responsive mobile - max-width 767px */
+@media screen and (max-width:767px){
+    #en-tete div img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #en-tete div nav ul{
+        gap: 25px;
+    }
+
+    #section-1 article #para-img{
+        flex-direction: column;
+    }
+
+    #section-1 article div .div-1 #para{
+        padding-top: 43px;
+    }
+
+    #section-2 div .container{
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    #section-2 div .container div{
+        border: none;
+        padding: 10px 0;
+    }
+
+    #section-3 div .image{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #section-4 .web article #image123 {
+
+    }
+
+    #section-5 div #contacter{
+        flex-wrap: wrap;
+    }
+
+    #section-5 #contacter article {
+        top: 0;
+    }
+
+    #section-5 div form .email, #section-5 div form textarea{
+        width: 100%;
+    }
+
+    #footer div{
+        padding: 10px 0;
     }
 }
