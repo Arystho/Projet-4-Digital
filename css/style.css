@@ -75,6 +75,7 @@ ul{
 #en-tete div nav ul{
     display: flex;
     gap: 80px;
+    flex-wrap: wrap;
 }
 
 #en-tete div nav ul .about{
@@ -89,6 +90,7 @@ ul{
 /* section 1 */
 #section-1{
     background: var(--white-grey);
+    padding: 0 15px;
 }
 #section-1 article{
     /* max-width: 1440px;*/
@@ -145,7 +147,7 @@ ul{
 }
 
 #section-1 article div  #img-1{
-    width: 663px;
+    /* width: 663px; */
     height: auto;
     padding: 30px 0 30px 40px;
     position: relative;
@@ -417,10 +419,10 @@ ul{
     margin: 20px 0;
 }
 
-#section-5 div #contacter form{
+/* #section-5 div #contacter form{
     position: relative;
     right: 37px;
-}
+} */
 
 /* footer */
 /* #footer div {
@@ -443,7 +445,7 @@ ul{
         text-align: center;
     }
     #section-1 article div #img-1 {
-        height: auto;
+        /* height: auto; */
         padding: 25px;
     }
     #section-2 div .container div {
@@ -462,7 +464,7 @@ ul{
     }
 }
 
-/* Responsive mobile - max-width 767px */
+/* Responsive mobile - max-width 767px à 320px */
 @media screen and (max-width:767px){
     #en-tete div img{
         width: 150px;
@@ -487,6 +489,12 @@ ul{
         padding: 0 10px;
     }
 
+    #section-2 div .skills,
+    #section-4 div .skill{
+        display: flex;
+        flex-direction: column;
+    }
+
     #section-2 div .container div{
         border: none;
         padding: 10px 0;
@@ -507,10 +515,11 @@ ul{
 
     #section-5 #contacter article {
         top: 0;
+        padding-right: 0;
     }
 
     #section-5 div form .email, #section-5 div form textarea{
-        width: 100%;
+        width: -webkit-fill-available;
     }
 
     #footer div{
